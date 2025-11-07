@@ -1,5 +1,11 @@
 Flask
-openai-whisper
 Flask-Cors
-gunicorn # Nécessaire pour faire tourner Flask en production
-geventwebsocket #
+gunicorn
+geventwebsocket
+
+# Force l'installation de PyTorch en version CPU-only
+# Cela évite les énormes téléchargements de paquets CUDA (GPU)
+torch --index-url https://download.pytorch.org/whl/cpu
+
+# Whisper (utilisera la version CPU de torch installée ci-dessus)
+openai-whisper
