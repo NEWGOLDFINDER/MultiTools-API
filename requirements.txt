@@ -1,0 +1,4 @@
+Flask
+openai-whisper
+Flask-Cors
+gunicorn # Nécessaire pour faire tourner Flask en production
