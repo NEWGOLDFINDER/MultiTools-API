@@ -11,7 +11,7 @@ CORS(app) # <-- Ajoutez cette ligne (si vous aviez des erreurs CORS)
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-WHISPER_MODEL = "base" # ou 'tiny' si 'base' est trop lent/gourmand
+WHISPER_MODEL = "tiny" # ou 'tiny' si 'base' est trop lent/gourmand
 
 print(f"Chargement du modèle Whisper '{WHISPER_MODEL}'... Cela peut prendre un moment la première fois.")
 try:
@@ -71,4 +71,5 @@ def transcribe_audio():
 if __name__ == '__main__':
     print("\nAPI Flask démarrée. Accédez à http://127.0.0.1:5000/")
     print("Pour tester la transcription, vous devrez envoyer un fichier POST à http://127.0.0.1:5000/transcribe")
+
     app.run(debug=True)
